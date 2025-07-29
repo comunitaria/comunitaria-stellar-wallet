@@ -1,0 +1,8 @@
+.fondoAnimado{
+    background-color: #a0d28b ;
+    animation: cambiafondo 5s;
+}
+@keyframes cambiafondo {
+    from {background-color: #00309d;}
+    to {background-color: #a0d28b;}
+  }

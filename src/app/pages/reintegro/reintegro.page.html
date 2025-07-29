@@ -1,0 +1,16 @@
+<app-header [titulo]="'Reintegro'"></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+    <h1 class="">Comunitaria<br><br></h1>
+    <ion-card class="ion-padding" *ngIf="esComercio">
+        <ion-item lines="none"><h3 class="ILLA">{{'Saldo disponible: '+saldoILLA}}</h3></ion-item>
+        <fieldset class="input-item">
+            <legend>Cantidad a transferir</legend>
+            <ion-input #ipCantidad  (ionChange)="pulsado($event)"   class="grande" type="number" max="estado.usuario.monedero.cuenta.balanceCripto" placeholder="" name="txtImporte" [(ngModel)]="importeTransferencia"></ion-input>
+        </fieldset>
+        <ion-text color="danger">{{sinSaldo?'Saldo insuficiente':'&nbsp;'}}</ion-text>
+        <ion-button class="ion-margin" expand="block" (click)="transferirDistribuidora()" shape="round">
+            Transferir a distribuidora
+        </ion-button>
+    </ion-card>
+</ion-content>

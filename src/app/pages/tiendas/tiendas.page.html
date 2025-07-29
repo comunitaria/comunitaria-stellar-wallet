@@ -1,0 +1,22 @@
+<app-header [titulo]="nombre || 'Comercios'"></app-header>
+<ion-content [fullscreen]="true">
+
+    <ion-list>
+        <ion-item-sliding *ngFor="let tienda of estado.usuario.comercios; let i = index; ">
+            <ion-item  lines="none">
+                <ion-card>
+                    <img style="width: 90vh;  object-fit: cover;height: 30vh;" [src]="estado.comercios[tienda.id!].logo" />
+                    <ion-card-header>
+                      <ion-card-title>{{tienda.nombre}}</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-button (click)="comprar(tienda)" expand="block" fill="clear" shape="round">                
+                            Comprar
+                        </ion-button>
+                    </ion-card-content>
+                  </ion-card>                
+            </ion-item>
+        </ion-item-sliding>
+    </ion-list>
+
+</ion-content>

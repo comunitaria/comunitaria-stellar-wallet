@@ -1,0 +1,7 @@
+{
+  "name": "Monedero ILLA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

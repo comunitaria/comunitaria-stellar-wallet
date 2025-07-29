@@ -1,0 +1,32 @@
+<app-header [titulo]="'Monedero'"></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+    <h1 class="">{{estado.usuario.nombre+' '+(estado.usuario.apellidos||'')}}</h1>
+    <p class="para" style="margin-bottom: 50px;">Éste es su saldo en ILLAs</p>
+    <ion-grid>
+        <ion-row class="ion-align-items-center" style="display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;">
+            <ion-col class="ion-text-center" size="9">
+                    <ion-text class="ILLA" style="font-size: 3rem;">{{saldoILLA}}</ion-text>
+            </ion-col>
+            <ion-col size="3">
+                <ion-button shape="round" expand="block" (click)="refrescarSaldo()">
+                    <ion-icon name="refresh"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-list class="ticket" *ngIf="transacciones.length>0" >
+            <ion-item>
+                <ion-text class="ion-margin-top" color="success">Últimas transacciones:</ion-text>
+            </ion-item>
+            <ion-item *ngFor="let transaccion of transacciones; let i = index; " >
+                <ion-col *ngIf="!transaccion.reciente">{{transaccion.momento.toLocaleString()}}</ion-col>
+                <ion-col [style.font-size]="transaccion.reciente?'2rem':''">{{transaccion.concepto}}</ion-col>
+                <ion-col class="ion-text-end"><ion-text  [style.font-size]="transaccion.reciente?'2rem':''" [color]="transaccion.pago?'primary':'success'" class="ILLA">{{transaccion.cantidad}}</ion-text></ion-col>
+            </ion-item>
+        </ion-list>
+    </ion-grid>
+
+</ion-content>

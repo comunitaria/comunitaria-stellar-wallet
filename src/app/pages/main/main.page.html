@@ -1,0 +1,16 @@
+<ion-tabs>
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="test">
+            <ion-icon name="wallet"></ion-icon>
+            <ion-label>Mi monedero</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="tiendas">
+            <ion-icon name="storefront"></ion-icon>
+            <ion-label>Comercios</ion-label>
+        </ion-tab-button>
+        <ion-tab-button *ngIf="estado.usuario.clase=='comercio'" tab="reintegro">
+            <ion-icon name="paper-plane"></ion-icon>
+            <ion-label>Reintegro</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>

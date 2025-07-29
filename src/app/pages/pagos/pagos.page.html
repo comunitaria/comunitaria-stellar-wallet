@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{ estado.comercios[idTienda].nombre}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+    <ion-img src="{{ estado.comercios[idTienda].logo }}"></ion-img>
+
+    <ion-item lines="none"><h3 class="ILLA">{{'Saldo disponible: '+saldoILLA}}</h3></ion-item>
+    <fieldset class="input-item">
+        <legend>Cantidad ILLAs</legend>
+        <ion-input #ipCantidad  (ionChange)="pulsado($event)"  class="grande" name="txtCantidad" [(ngModel)]="cantidad" ion-input type="number" max="estado.usuario.monedero.cuenta.balanceCripto" ></ion-input>
+    </fieldset>
+    <ion-text color="danger">{{sinSaldo?'Saldo insuficiente':'&nbsp;'}}</ion-text>
+    <ion-button style="margin-top:1rem" class="login-button" (click)="pagar()" expand="block">
+        Pagar
+    </ion-button>
+
+    <ion-button (click)="salirSin()" expand="block" class="google-button" expand="block" color="light">
+        Volver
+    </ion-button>
+
+
+</ion-content>

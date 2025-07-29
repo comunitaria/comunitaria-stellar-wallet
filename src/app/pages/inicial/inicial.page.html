@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true" >
+    <div class="fondoAnimado" style="display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;">
+        <div class="ion-item" style="display: block;
+        margin: auto;
+        width: 50%;">
+            <ion-img (ionImgDidLoad)="cargada = true" src="assets/img/monedero.svg" class="ion-align-self-end" style="margin:auto;width: 80%;  border-radius: 1rem;"></ion-img>
+            <h3 *ngIf="cargada" class="ion-item" style="text-align:center;color:white">Monedero Illa</h3>
+            <p  *ngIf="cargada" class="ion-item" style="text-align:center;color:white">Una moneda social de <strong>Comunitaria</strong></p>
+        </div>
+    </div>
+    <!--<img src="assets/img/powered.png" style="position: absolute;
+    right: 0px;
+    bottom: 0px;"/>-->
+    
+</ion-content>

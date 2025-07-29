@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+
+    <div class="container">
+        <ion-img style="width:25%" src="assets/img/Comunitaria Icono.png"/>
+        <h1 class="heading">¡Bienvenid&commat;!<br><br></h1>
+        <p class="para">Introduce tu usuario </p>
+   
+            <ion-item  lines="none">
+                <fieldset class="input-item">
+                    <legend>Usuario</legend>
+                    <ion-input type="text" placeholder="Usuario" name="txtNombre" [(ngModel)]="usuario.nombre"></ion-input>
+
+                </fieldset>
+
+            </ion-item>
+            <ion-button class="login-button" (click)="onClick()" expand="block">Entrar</ion-button>
+
+
+    </div>
+</ion-content>
+

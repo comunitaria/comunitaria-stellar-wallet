@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="97.93mm" height="97.93mm" version="1.1" viewBox="0 0 97.93 97.93" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter31279" x="-.089408" y="-.089408" width="1.2161" height="1.2161" color-interpolation-filters="sRGB">
+   <feFlood flood-color="rgb(0,0,0)" flood-opacity=".49804" result="flood"/>
+   <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
+   <feGaussianBlur in="composite1" result="blur" stdDeviation="3"/>
+   <feOffset dx="3" dy="3" result="offset"/>
+   <feComposite in="SourceGraphic" in2="offset" result="composite2"/>
+  </filter>
+ </defs>
+ <g transform="translate(-57.815 -92.169)">
+  <circle cx="105.28" cy="139.63" r="40.265" fill="#a0d28b" filter="url(#filter31279)"/>
+  <path d="m85.701 140.43 14.407 17.362 22.164-42.112" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.865"/>
+ </g>
+</svg>

@@ -1,0 +1,10 @@
+.ticket{
+    border: solid 1px #eeeeee;
+    border-radius: 1rem;
+}
+.ticket .item-native{
+    padding-left: 0px;
+}
+.ticket .item-inner{
+    padding-left: calc(var(--padding-start) + var(--ion-safe-area-left, 0px));
+}

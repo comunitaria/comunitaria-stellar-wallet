@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Transfiriendo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"  (click)="salir()">
+  <ion-row style="margin-top:5rem" class="ion-margin ion-justify-content-center">
+    <h3 class="ion-text-center" color="primary">Transfiriendo pago de <span class="ILLA">{{this.cantidadILLA}}</span></h3>
+  </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-spinner  *ngIf="(!listo)&&(!error)" style="vertical-align: bottom;" name="dots"></ion-spinner>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+    <div style="width:70%">
+      <img class="ion-text-center"  (click)="salir()" src="assets/img/NOK.svg" *ngIf="error"/>
+      <svg class="ion-text-center" (click)="salir()" [ngClass]="listo?'pintar':''" width="100%" height="100%" version="1.1" viewBox="0 0 97.93 97.93" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+        <filter id="filter31279" x="-.089408" y="-.089408" width="1.2161" height="1.2161" color-interpolation-filters="sRGB">
+          <feFlood flood-color="rgb(0,0,0)" flood-opacity=".49804" result="flood"></feFlood>
+          <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"></feComposite>
+          <feGaussianBlur in="composite1" result="blur" stdDeviation="3"></feGaussianBlur>
+          <feOffset dx="3" dy="3" result="offset"></feOffset>
+          <feComposite in="SourceGraphic" in2="offset" result="composite2"></feComposite>
+        </filter>
+        </defs>
+        <g transform="translate(-57.815 -92.169)">
+        <circle cx="105.28" cy="139.63" r="40.265" fill="#a0d28b" filter="url(#filter31279)" class="svg-elem-1"></circle>
+        <path d="m85.701 140.43 14.407 17.362 22.164-42.112" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.865" class="svg-elem-2"></path>
+        </g>
+      </svg>
+    </div>
+  </ion-row>
+  <ion-row  class="ion-justify-content-center" *ngIf="listo">Pago realizado</ion-row>
+  <ion-row  class="ion-justify-content-center" color="danger" *ngIf="error">El pago no se ha realizado por error</ion-row>
+</ion-content>
